@@ -1,0 +1,199 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#canvas {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.pic__label {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.pic__label:hover {
+  cursor: pointer;
+  border-color: #646cff;
+}
+
+.main__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.side__container {
+  width: 450px; 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.begin__container{ 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.settings__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.settings__div {
+  width: 100%;
+} 
+
+.text__input {
+  width: 50px;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.text__select {
+  border-radius: 8px;
+  border: 0px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  outline: none;
+  margin: 10px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+.text__settings__div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.disable{
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.40);
+}
+
+input {
+  border-radius: 8px;
+  border: 0px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  outline: none
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+  padding: 0;
+  margin: 0;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+.css-checkbox { position: absolute; overflow: hidden; clip: rect(0 0 0 0); height: 1px; width: 1px; margin: -1px; padding: 0; border: 0; }#inputPreview { display: flex; gap: 20px; justify-content: center;	}
+.css-checkbox + label { position: relative; cursor: pointer; display: inline-flex; align-items: center; height: 24px; }
+.css-checkbox + label::before { content: " "; display: inline-block; vertical-align: middle; margin-right: 3px; width: 22px; height: 22px; background-color: rgb(26, 26, 26); border-width: 1px; border-style: solid; border-color: rgb(26, 26, 26); border-radius: 2px; box-shadow: none; }
+.css-checkbox:checked + label::after { content: " "; background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTczLjg5OCA0MzkuNDA0bC0xNjYuNC0xNjYuNGMtOS45OTctOS45OTctOS45OTctMjYuMjA2IDAtMzYuMjA0bDM2LjIwMy0zNi4yMDRjOS45OTctOS45OTggMjYuMjA3LTkuOTk4IDM2LjIwNCAwTDE5MiAzMTIuNjkgNDMyLjA5NSA3Mi41OTZjOS45OTctOS45OTcgMjYuMjA3LTkuOTk3IDM2LjIwNCAwbDM2LjIwMyAzNi4yMDRjOS45OTcgOS45OTcgOS45OTcgMjYuMjA2IDAgMzYuMjA0bC0yOTQuNCAyOTQuNDAxYy05Ljk5OCA5Ljk5Ny0yNi4yMDcgOS45OTctMzYuMjA0LS4wMDF6Ii8+PC9zdmc+"); background-repeat: no-repeat; background-size: 14px 14px; background-position: center center; position: absolute; display: flex; justify-content: center; align-items: center; margin-left: 0px; left: 0px; top: 0px; text-align: center; background-color: transparent; font-size: 10px; height: 24px; width: 24px; }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
