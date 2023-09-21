@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "memegen-bb45d",
     "public": "dist",
     "ignore": [],
     "rewrites": [
